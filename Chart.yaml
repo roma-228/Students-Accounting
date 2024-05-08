@@ -1,6 +1,0 @@
-apiVersion: v2
-name: accountingcollege
-description: This Helm Chart is designed to deploy a "Student Management" application in a Kubernetes environment. The "Student Management" application is a tool for accounting and quick management of students and their academic performance.
-type: application
-version: 0.1.0
-appVersion: "1.16.0"
