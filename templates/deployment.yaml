@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: accountingcollege-deployment
+spec:
+  {{- if .Values.accounting.replicas }}
+  replicas: {{ .Values.accounting.replicas  }}
+  {{- end }}
+  {{- if .Values.accounting.minReplicas }}
+  minReplicas: {{ .Values.accounting.minReplicas }}
+  maxReplicas: {{ .Values.accounting.maxReplicas }}
+  {{- end }}
+  selector:
+    matchLabels:
+      app: accountingcollege
+  template:
+    metadata:
+      labels:
+        app: accountingcollege
+    spec:
+      containers:
+      - name: accountingcollege
+        image: {{ .Values.image.replicas  }}
+        ports:
+        - containerPort: {{ .Values.containerPort.replicas  }}
+        env:
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: {{ .Values.DB_HOST.replicas  }}
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: {{ .Values.DB_USER.replicas  }}
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: {{ .Values.DB_PASSWORD.replicas  }}
+        - name: DB_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: {{ .Values.DB_DATABASE.replicas  }}
