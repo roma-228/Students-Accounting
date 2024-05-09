@@ -3,14 +3,14 @@ entries:
   accountingcollege:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-05-08T21:14:51.169696+03:00"
+    created: "2024-05-09T22:11:37.3328814+03:00"
     description: This Helm Chart is designed to deploy a "Student Management" application
       in a Kubernetes environment. The "Student Management" application is a tool
       for accounting and quick management of students and their academic performance.
-    digest: 09b3a12e3679773cb75620a3cb737ca3c0e6d1d3014472239b4a4acdc0dc60ee
+    digest: 5f33cff08d7e32ab8d99f59404bfcb9a677f342167154b49110448bc166d7a1c
     name: accountingcollege
     type: application
     urls:
     - accountingcollege-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-08T21:14:51.1685601+03:00"
+generated: "2024-05-09T22:11:37.3318367+03:00"
